@@ -38,7 +38,7 @@ function MainNavigation() {
           {/* Home + Shop button 1 div */}
           <div className={"flex w-[100px] justify-between"}>
             <NavLink
-              to="/"
+              to="/shopping-page/"
               className={({ isActive }) =>
                 isActive ? `text-yellow-500` : undefined
               }

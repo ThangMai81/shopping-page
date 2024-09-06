@@ -79,9 +79,9 @@ function CartPage() {
   }
   function handleNavigateAfterCheckItems(type) {
     if (type === "shop") {
-      navigate("/shop");
+      navigate("/shopping-page/shop");
     } else {
-      navigate("/checkout");
+      navigate("/shopping-page/checkout");
     }
   }
   return (

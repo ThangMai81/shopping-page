@@ -11,7 +11,7 @@ export default function ProductsItem({ item, index, showModal }) {
     if (showModal === true) {
       dispatch(popSlice.actions.show_popup(index));
     } else {
-      navigate(`/detail/${item._id["$oid"]}`);
+      navigate(`/shopping-page/detail/${item._id["$oid"]}`);
     }
   }
   return (

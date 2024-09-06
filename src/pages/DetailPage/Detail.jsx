@@ -44,10 +44,10 @@ export default function Detail({ listItems, productId }) {
     // if user has not logged in and want to buy product, he would have to log in first
     if (typeof getUser === "object" && Object.keys(getUser).length === 0) {
       window.alert("You haven't logged in yet!");
-      navigate("/login");
+      navigate("/shopping-page/login");
       // have logged in already
     } else {
-      navigate("/cart");
+      navigate("/shopping-page/cart");
     }
     // mark that the add to cart has been clicked
     const itemForCart = {
