@@ -46,19 +46,22 @@ export const categoriesClickSlice = createSlice({
   },
 });
 // Slice to manage login state (to change login -> logout and so on)
-const initialLoginState = { isLogin: false };
+const initialLoginState = {
+  account: {},
+};
 export const loginSlice = createSlice({
   name: "login",
   initialState: initialLoginState,
   reducers: {
     ON_LOGIN(state, action) {
-      state.isLogin = true;
       // Save to local storage
       localStorage.setItem("user-login", JSON.stringify(action.payload));
+      // Set again to trigger if change happenned
+      state.account = JSON.parse(localStorage.getItem("user-login")) || {};
     },
     ON_LOGOUT(state) {
-      state.isLogin = false;
       localStorage.removeItem("user-login");
+      state.account = JSON.parse(localStorage.getItem("user-login")) || {};
     },
   },
 });

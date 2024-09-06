@@ -6,7 +6,7 @@ import { addToCartButtonSlice, loginSlice } from "../store/ReduxStore";
 function MainNavigation() {
   const dispatch = useDispatch();
   const userArr = JSON.parse(localStorage.getItem("userArr")) || [];
-  const userLogin = JSON.parse(localStorage.getItem("user-login")) || {};
+  const userLogin = useSelector((state) => state.loginReducer.account);
   const loginState = Object.keys(userLogin).length > 0;
   let userName = "";
   if (loginState) {
@@ -16,6 +16,7 @@ function MainNavigation() {
         eachUser.password === userLogin.password
     )[0].fullname;
   }
+  console.log(userLogin);
   function handleLogOut() {
     dispatch(loginSlice.actions.ON_LOGOUT());
     // *this is for navigating to main part
@@ -42,6 +43,7 @@ function MainNavigation() {
               className={({ isActive }) =>
                 isActive ? `text-yellow-500` : undefined
               }
+              end
             >
               Home
             </NavLink>

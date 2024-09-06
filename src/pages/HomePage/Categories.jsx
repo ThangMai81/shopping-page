@@ -20,29 +20,29 @@ export default function Categories() {
       <div>
         <div className="grid grid-cols-2 mb-[20px] gap-[20px]">
           <img
-            src="../../public/product_1.png"
+            src="./product_1.png"
             onClick={handleNavigateShopPage}
             className={hoverEff}
           />
           <img
-            src="../../public/product_2.png"
+            src="./product_2.png"
             onClick={handleNavigateShopPage}
             className={hoverEff}
           />
         </div>
         <div className="grid grid-cols-3 gap-[20px]">
           <img
-            src="../../public/product_3.png"
+            src="./product_3.png"
             onClick={handleNavigateShopPage}
             className={hoverEff}
           />
           <img
-            src="../../public/product_4.png"
+            src="./product_4.png"
             onClick={handleNavigateShopPage}
             className={hoverEff}
           />
           <img
-            src="../../public/product_5.png"
+            src="./product_5.png"
             onClick={handleNavigateShopPage}
             className={hoverEff}
           />

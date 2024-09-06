@@ -11,7 +11,7 @@ function LoginPage() {
 
   return (
     <div className="relative">
-      <img src="../../public/banner1.jpg"></img>
+      <img src="./banner1.jpg"></img>
       {changePage === "Sign Up" && (
         <SignUp handleChangePage={handleChangePage} />
       )}
